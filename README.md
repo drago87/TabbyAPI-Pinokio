@@ -28,7 +28,7 @@
 
 > [!NOTE]
 > 
->  Rename the installer - x.js where x is the Grapics card you use if unsuere use NNVIDIA Cuda 12.x.js (This is the standard one)
+>  Rename the installer - x.js where x is the Graphics card you use to installer.js if unsure use NNVIDIA Cuda 12.x.js (This is the standard one)
 
 > [!IMPORTANT]
 >  
