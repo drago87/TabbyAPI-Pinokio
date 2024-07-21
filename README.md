@@ -26,6 +26,10 @@
 >  
 >  This is a copy of theroyallab [TabbyAPI](https://github.com/theroyallab/tabbyAPI) Git-Readme
 
+> [!NOTE]
+> 
+>  Rename the installer - x.js where x is the Grapics card you use if unsuere use NNVIDIA Cuda 12.x.js (This is the standard one)
+
 > [!IMPORTANT]
 >  
 >  In addition to the README, please read the [Wiki](https://github.com/theroyallab/tabbyAPI/wiki/1.-Getting-Started) page for information about getting started!
