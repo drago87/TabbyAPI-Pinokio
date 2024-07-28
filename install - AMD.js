@@ -29,9 +29,6 @@ module.exports = {
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
           "pip install gradio devicetorch",
-          "pip install psutil",
-          "pip install loguru",
-          "pip install exllamav2",
           "echo cu121 > amd.txt"
         ]
       }
