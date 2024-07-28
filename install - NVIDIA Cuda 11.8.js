@@ -29,6 +29,7 @@ module.exports = {
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
           "pip install gradio devicetorch",
+          "pip install psutil",
           "echo cu118 > gpu_lib.txt"
         ]
       }
