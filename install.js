@@ -31,6 +31,7 @@ module.exports = {
           "pip install gradio devicetorch",
           "pip install psutil",
           "pip install loguru",
+          "pip install exllamav2",
           "echo cu121 > gpu_lib.txt"
         ]
       }
