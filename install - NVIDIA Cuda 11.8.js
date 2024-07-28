@@ -30,6 +30,7 @@ module.exports = {
         message: [
           "pip install gradio devicetorch",
           "pip install psutil",
+          "pip install loguru",
           "echo cu118 > gpu_lib.txt"
         ]
       }
