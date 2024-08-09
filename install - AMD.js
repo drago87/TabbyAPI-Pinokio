@@ -29,7 +29,7 @@ module.exports = {
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
           "pip install gradio devicetorch",
-          "echo cu121 > amd.txt"
+          "echo {\"gpu_lib\": \"amd\", \"first_run_done\": false} > start_options.json"
         ]
       }
     },

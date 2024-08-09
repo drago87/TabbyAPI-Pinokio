@@ -13,8 +13,7 @@ module.exports = {
 
     let installed = info.exists("app/env");
     let runningStart = info.running("start.js");
-    let runningNoUpdate = info.running("start-no_update.js");
-    let running = runningStart || runningNoUpdate;
+    let running = runningStart;
 
     if (installing) {
       if (installingNvidia12) {
@@ -27,8 +26,8 @@ module.exports = {
     } else if (installed) {
       let arr;
       if (running) {
-        let local = runningStart ? info.local("start.js") : info.local("start-no_update.js");
-        arr = [{ icon: "fa-solid fa-terminal", text: "Terminal", href: runningStart ? "start.js" : "start-no_update.js" }];
+        let local = info.local("start.js");
+        arr = [{ icon: "fa-solid fa-terminal", text: "Terminal", href: "start.js" }];
         if (local && local.url) {
           return [{
             default: true,
@@ -38,20 +37,19 @@ module.exports = {
           }, {
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
-            href: runningStart ? "start.js" : "start-no_update.js",
+            href: "start.js",
           }];
         } else {
           return [{
             default: true,
             icon: 'fa-solid fa-terminal',
             text: "Terminal",
-            href: runningStart ? "start.js" : "start-no_update.js",
+            href: "start.js",
           }];
         }
       } else {
         arr = [
-          { default: false, icon: "fa-solid fa-power-off", text: "Start", href: "start.js" },
-          { default: false, icon: "fa-solid fa-power-off", text: "Start No Update", href: "start-no_update.js" }
+          { default: true, icon: "fa-solid fa-power-off", text: "Start", href: "start.js" }
         ];
         arr = arr.concat([{
           icon: "fa-solid fa-download",
