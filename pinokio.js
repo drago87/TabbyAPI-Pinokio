@@ -6,9 +6,9 @@ module.exports = {
   description: "A local-install LLM backend",
   icon: "icon.png",
   menu: async (kernel, info) => {
-    let installingNvidia12 = info.running("install - NVIDIA Cuda 12.x.js");
-    let installingNvidia11 = info.running("install - NVIDIA Cuda 11.8.js");
-    let installingAMD = info.running("install - AMD.js");
+    let installingNvidia12 = info.running("install%20-%20NVIDIA%20Cuda%2012.x.js");
+    let installingNvidia11 = info.running("install%20-%20NVIDIA%20Cuda%2011.8.js");
+    let installingAMD = info.running("install%20-%20AMD.js");
     let installing = installingNvidia12 || installingNvidia11 || installingAMD;
 
     let installed = info.exists("app/env");
@@ -17,11 +17,11 @@ module.exports = {
 
     if (installing) {
       if (installingNvidia12) {
-        return [{ default: false, icon: "fa-solid fa-plug", text: "Installing", href: "install - NVIDIA Cuda 12.x.js" }];
+        return [{ default: false, icon: "fa-solid fa-plug", text: "Installing", href: "install%20-%20NVIDIA%20Cuda%2012.x.js" }];
       } else if (installingNvidia11) {
-        return [{ default: false, icon: "fa-solid fa-plug", text: "Installing", href: "install - NVIDIA Cuda 11.8.js" }];
+        return [{ default: false, icon: "fa-solid fa-plug", text: "Installing", href: "install%20-%20NVIDIA%20Cuda%2011.8.js" }];
       } else if (installingAMD) {
-        return [{ default: false, icon: "fa-solid fa-plug", text: "Installing", href: "install - AMD.js" }];
+        return [{ default: false, icon: "fa-solid fa-plug", text: "Installing", href: "install%20-%20AMD.js" }];
       }
     } else if (installed) {
       let arr;
@@ -55,9 +55,9 @@ module.exports = {
           icon: "fa-solid fa-download",
           text: "Install",
           menu: [
-            { text: "Install NVIDIA Cuda 12.x", icon: "fa-solid fa-plug", href: "install - NVIDIA Cuda 12.x.js", mode: "refresh" },
-            { text: "Install NVIDIA Cuda 11.8", icon: "fa-solid fa-plug", href: "install - NVIDIA Cuda 11.8.js", mode: "refresh" },
-            { text: "Install AMD", icon: "fa-solid fa-plug", href: "install - AMD.js", mode: "refresh" },
+            { text: "Install NVIDIA Cuda 12.x", icon: "fa-solid fa-plug", href: "install%20-%20NVIDIA%20Cuda%2012.x.js", mode: "refresh" },
+            { text: "Install NVIDIA Cuda 11.8", icon: "fa-solid fa-plug", href: "install%20-%20NVIDIA%20Cuda%2011.8.js", mode: "refresh" },
+            { text: "Install AMD", icon: "fa-solid fa-plug", href: "install%20-%20AMD.js", mode: "refresh" },
           ]
         }, {
           icon: "fa-solid fa-plug",
@@ -72,9 +72,9 @@ module.exports = {
       }
     } else {
       return [
-        { text: "Install NVIDIA Cuda 12.x", icon: "fa-solid fa-plug", href: "install - NVIDIA Cuda 12.x.js" },
-        { text: "Install NVIDIA Cuda 11.8", icon: "fa-solid fa-plug", href: "install - NVIDIA Cuda 11.8.js" },
-        { text: "Install AMD", icon: "fa-solid fa-plug", href: "install - AMD.js" }
+        { text: "Install NVIDIA Cuda 12.x", icon: "fa-solid fa-plug", href: "install%20-%20NVIDIA%20Cuda%2012.x.js" },
+        { text: "Install NVIDIA Cuda 11.8", icon: "fa-solid fa-plug", href: "install%20-%20NVIDIA%20Cuda%2011.8.js" },
+        { text: "Install AMD", icon: "fa-solid fa-plug", href: "install%20-%20AMD.js" }
       ];
     }
   }
